@@ -1,0 +1,109 @@
+<html>
+<head>
+<style>
+body{
+background-color:black;
+font-family:"open sans";
+}
+table{
+display:flex;
+justify-items:center;
+justify-content:center;
+}
+button{
+width:60px;
+height:60px;
+border-color:red;
+}
+</style>
+<title>
+Tic Tac Toe
+</title>
+<body><center>
+<table border="0" >
+<tr>
+<th colspan="4">Tic Tac Toe</th>
+</tr>
+<tr>
+<td colspan=3><button onclick=num(10)>Result</button></td>
+</tr>
+
+<tr>
+<td><button id="11" style="background-color:Black;" onclick=num(11)></button></td>
+<td><button id="12" style="background-color:Black;" onclick=num(12)></button></td>
+<td><button id="13" style="background-color:Black;" onclick=num(13)></button></td>
+</tr>
+<tr>
+<td><button id="21" style="background-color:Black;" onclick=num(21)></button></td>
+<td><button id="22" style="background-color:Black;" onclick=num(22)></button></td>
+<td><button id="23" style="background-color:Black;" onclick=num(23)></button></td>	
+</tr>
+<tr>
+<td><button id="31" style="background-color:Black;" onclick=num(31)></button></td>
+<td><button id="32" style="background-color:Black;" onclick=num(32)></button></td>
+<td><button id="33" style="background-color:Black;" onclick=num(33)></button></td>
+</tr>
+<label> First Chance of "X"
+<br><H1><label id="List"></label></H1>
+</table>
+<script>
+var a=0;
+var b="";
+var c=0;
+var d="";
+var arr=[]
+function num(n){
+c=n
+if(arr[11]=="O" && arr[22]=="O" && arr[33]=="O"){
+n="List"
+a="O is Winner"
+}
+else if(arr[11]=="X" && arr[22]=="X" && arr[33]=="X"){
+n="List"
+a="X is Winner"
+}
+else if(arr[13]=="O" && arr[22]=="O" && arr[31]=="O"){
+n="List"
+a="O is Winner"
+}
+else if(arr[13]=="X" && arr[22]=="X" && arr[31]=="X"){
+n="List"
+a="X is Winner"
+}
+else if(arr[12]=="O" && arr[22]=="O" && arr[32]=="O"){
+n="List"
+a="O is Winner"
+}
+else if(arr[12]=="X" && arr[22]=="X" && arr[32]=="X"){
+n="List"
+a="X is Winner"
+}
+else if(arr[21]=="O" && arr[22]=="O" && arr[23]=="O"){
+n="List"
+a="O is Winner"
+}
+else if(arr[21]=="X" && arr[22]=="X" && arr[23]=="X"){
+n="List"
+a="X is Winner"
+}
+else if(a=="O")
+{
+a="X"	
+arr[n]="X"
+e="Red"
+}
+else if(a!="O"){
+a="O"
+arr[n]="O"
+e="Blue"
+}
+
+document.getElementById(n).innerHTML=a;
+console.log(arr);
+document.getElementById(n).style.color=e;
+document.getElementById(n).disabled =true;
+}
+</script>
+</center>
+</body>
+</html>
